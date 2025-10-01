@@ -18,7 +18,7 @@ A powerful Node.js client for interacting with the official GoHighLevel MCP (Mod
 
 ```bash
 # Clone from GitHub
-git clone https://github.com/YOUR-ORG/gohighlevel-mcp.git
+git clone https://github.com/CryptoJym/gohighlevel-mcp.git
 cd gohighlevel-mcp
 
 # Install dependencies

@@ -34,7 +34,7 @@
 2. Copy and paste this:
 
 ```bash
-git clone https://github.com/YOUR-ORG/gohighlevel-mcp.git
+git clone https://github.com/CryptoJym/gohighlevel-mcp.git
 cd gohighlevel-mcp
 npm install
 ```
