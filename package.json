@@ -1,0 +1,44 @@
+{
+  "name": "@manus-ai/gohighlevel-mcp",
+  "version": "1.0.0",
+  "description": "Plug-and-play MCP server for GoHighLevel CRM automation. Connect to GoHighLevel's official MCP server with 21+ tools for contacts, conversations, opportunities, and more.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "ghl-mcp": "./cli.js",
+    "gohighlevel-mcp": "./gohighlevel-mcp-proxy.mjs"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js",
+    "dev": "node --watch index.js",
+    "setup": "node setup.js",
+    "validate": "node setup.js validate",
+    "postinstall": "node -e \"console.log('\\n🚀 GoHighLevel MCP installed! Run: npx ghl-mcp setup\\n')\""
+  },
+  "keywords": [
+    "gohighlevel",
+    "mcp",
+    "model-context-protocol",
+    "crm",
+    "automation",
+    "claude",
+    "ai",
+    "contacts",
+    "conversations",
+    "opportunities",
+    "calendar"
+  ],
+  "author": "Manus AI",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mcp-proxy": "^5.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

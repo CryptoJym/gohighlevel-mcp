@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "gohighlevel": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@manus-ai/gohighlevel-mcp"
+      ],
+      "env": {
+        "GHL_PRIVATE_INTEGRATION_TOKEN": "",
+        "GHL_LOCATION_ID": ""
+      }
+    }
+  }
+}

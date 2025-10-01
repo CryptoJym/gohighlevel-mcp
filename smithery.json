@@ -1,0 +1,50 @@
+{
+  "name": "gohighlevel-mcp",
+  "displayName": "GoHighLevel MCP",
+  "description": "Connect Claude to GoHighLevel CRM with 21+ tools for contacts, conversations, calendars, opportunities, and payments",
+  "author": "Manus AI",
+  "homepage": "https://github.com/YOUR-ORG/gohighlevel-mcp",
+  "categories": [
+    "crm",
+    "automation",
+    "marketing"
+  ],
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "GHL_PRIVATE_INTEGRATION_TOKEN": {
+        "type": "string",
+        "title": "Private Integration Token",
+        "description": "Your GoHighLevel Private Integration Token (starts with 'pit-'). Get it from Settings > Private Integrations in GoHighLevel.",
+        "pattern": "^pit-"
+      },
+      "GHL_LOCATION_ID": {
+        "type": "string",
+        "title": "Location ID",
+        "description": "Your GoHighLevel Location/Sub-account ID. Find it in your GoHighLevel account URL or API settings."
+      },
+      "DEBUG": {
+        "type": "boolean",
+        "title": "Debug Mode",
+        "description": "Enable detailed logging for troubleshooting",
+        "default": false
+      }
+    },
+    "required": [
+      "GHL_PRIVATE_INTEGRATION_TOKEN",
+      "GHL_LOCATION_ID"
+    ]
+  },
+  "transport": {
+    "type": "stdio",
+    "command": "node",
+    "args": [
+      "gohighlevel-mcp-proxy.mjs"
+    ],
+    "env": {
+      "GHL_PRIVATE_INTEGRATION_TOKEN": "{{GHL_PRIVATE_INTEGRATION_TOKEN}}",
+      "GHL_LOCATION_ID": "{{GHL_LOCATION_ID}}",
+      "DEBUG": "{{DEBUG}}"
+    }
+  }
+}
